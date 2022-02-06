@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordle</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" > -->
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
+    <!-- Default theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css" />
+    <!-- Semantic UI theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.min.css" />
+    <!-- Bootstrap theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css" />
+
+    <style>
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .game-heading {
+            font-weight: 200;
+            letter-spacing: 3px;
+            margin-bottom: 50px;
+        }
+
+        .game {
+            margin-top: 50px;
+        }
+
+        .game-over-text {
+            font-size: 20px;
+            letter-spacing: 1px;
+            font-weight: 400;
+
+        }
+
+        .table {
+            text-align: center;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="game">
+            <div class="row justify-content-center">
+                <div class=" col-auto">
+                    <h1 class="game-heading">Wordle</h1>
+                </div>
+            </div>
+
+            <form class="row mb-3 g-3">
+
+                <div class="col-auto">
+
+                    <input type="text" class="form-control" name="guessWord" id="guessWord" required autocomplete="off"
+                        placeholder="Guess!">
+                </div>
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-primary mb-3">Enter</button>
+                </div>
+            </form>
+
+
+            <table class="table table-bordered listOfGuessedWords">
+
+            </table>
+            <div class="game-over">
+
+
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.onkeydown = function(e) {
+        if(event.keyCode == 123) {
+        return false;
+        }
+        if(e.ctrlKey && e.keyCode == 'E'.charCodeAt(0)){
+        return false;
+        }
+        if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
+        return false;
+        }
+        if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){
+        return false;
+        }
+        if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){
+        return false;
+        }
+        if(e.ctrlKey && e.keyCode == 'S'.charCodeAt(0)){
+        return false;
+        }
+        if(e.ctrlKey && e.keyCode == 'H'.charCodeAt(0)){
+        return false;
+        }
+        if(e.ctrlKey && e.keyCode == 'A'.charCodeAt(0)){
+        return false;
+        }
+        if(e.ctrlKey && e.keyCode == 'F'.charCodeAt(0)){
+        return false;
+        }
+        if(e.ctrlKey && e.keyCode == 'E'.charCodeAt(0)){
+        return false;
+        }
+        }
+        </script>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script> -->
+
+    <script src="bootstrap.js"></script>
+    <script src="app.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+</body>
+
+</html>
